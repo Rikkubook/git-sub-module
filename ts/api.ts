@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const postAxios = async (apiRouter: string, parmar: unknown) => {
+const postAxios = async (apiRouter: string, parma: unknown) => {
   const API = import.meta.env.VITE_API;
   return new Promise((resolve, reject) => {
     axios
-      .post(`${API}${apiRouter}`, parmar)
+      .post(`${API}${apiRouter}`, parma)
       .then((response) => {
         console.log(response);
         resolve(response);
