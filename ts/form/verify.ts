@@ -4,6 +4,11 @@ const checkEmail = (email: string) => {
   return !emailRegex.test(email);
 };
 
+const checkPhone = (password: string) => {
+  const phoneRegex = /^(09)[0-9]{8}$/;
+  return !phoneRegex.test(password);
+};
+
 const checkPassword = (password: string) => {
   const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
   return !passwordRegex.test(password);
@@ -29,4 +34,5 @@ export {
   checkDoubleCheck,
   checkRequired,
   checkCheckbox,
+  checkPhone,
 };
